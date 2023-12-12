@@ -32,7 +32,7 @@ export const SearchBox: React.FC<SearchBoxProps> = ({ loading, searchValues, onC
 
     const renderSearchBoxes = () => {
         return (
-            <Paper elevation={3} sx={{ padding: 2, margin: 1, borderRadius: 5 }}>
+            <Paper elevation={3} sx={{ padding: 2, margin: 1, borderRadius: 5, width: "100%" }}>
                 <Typography variant="h6" sx={{ padding: 2, fontWeight: "bold" }}>
                     {t("InvoiceNumberSearch")}
                 </Typography>
