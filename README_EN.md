@@ -28,3 +28,7 @@ Note that this directory is intended for deployment to Vercel, but it can also b
 ## Notes  
 ### Precautions for Uploading CSV Files  
 When uploading CSV files, please include a header in the first row and the data in the following rows. The header columns should be "Invoice Number, Company Name, Address" from left to right, and please delete any other columns.  
+
+## LICENSE
+MIT  
+Copyright (c) 2023 Lotus
