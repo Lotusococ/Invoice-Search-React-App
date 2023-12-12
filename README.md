@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Invoice Search React App
+English version of README.md is on [here](/README_EN.md)  
+<img src="src/assets/img/Invoice%20Search%20App-logo.png" width="50%">  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 本ディレクトリの目的
+本ディレクトリは、インボイス番号の単一検索、複数検索、およびCSVファイルアップロードでのインボイス番号の整合性確認を可能とするReactアプリです。  
+なお、本ディレクトリはVercelへのデプロイを目標として記載しておりますが、AzureのApp Serviceなどへのデプロイも可能です。
 
-## Available Scripts
+## 環境変数
+| カテゴリ         | キー                | 値                     | 
+| ---------------- | ------------------- | ---------------------- | 
+| .env             | `BROWSER`           | none                   | 
+| .env.development | `REACT_APP_API_URL` | http://localhost:8000/ | 
+| .env.development | `REACT_APP_VERSION` | $npm_package_version   | 
+| .env.production  | `REACT_APP_API_URL` | Fast APIのURL          | 
+| .env.production  | `REACT_APP_VERSION` | $npm_package_version   | 
 
-In the project directory, you can run:
+## 使用方法
+### 単一検索、複数検索モード
+1. 検索したいインボイス番号をテキスト入力欄に入力し、「検索」ボタンを押下してください。
+2. テーブルに結果が表示されるので、不要なものがあれば「データ削除」ボタンを押下し、問題なければ「ダウンロード」ボタンを押下してください。
 
-### `npm start`
+### 整合性検索モード
+1. 確認したいインボイス番号が記載されたCSVをアップロードし、「検証」ボタンを押下。
+2. CSVファイルの会社名・住所とAPI検索の結果に相違がある場合はテーブル内の「元データとの整合性」列に✕印が表示されます。API検索の結果にマージする場合は「マージ」列のマージアイコンを押下しマージしてください。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 注意点
+### CSVファイルアップロード時の注意点
+CSVファイルアップロード時には、1行目にヘッダー、2行目以降にデータを記載してください。また、ヘッダー列は左から「インボイス番号、会社名、住所」にしていただき、それ以外の列は削除ください。
