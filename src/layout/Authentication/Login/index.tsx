@@ -95,7 +95,7 @@ export const Login: React.FC = () => {
         try {
             const provider = new GoogleAuthProvider();
             signInWithRedirect(auth, provider).catch((error) => {
-                console.error
+                console.error(error)
             });
         } catch (error) {
             showSnackbar("Failed to login.", "error");
