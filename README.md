@@ -30,4 +30,4 @@ CSVファイルアップロード時には、1行目にヘッダー、2行目以
 
 ## ライセンス
 MIT  
-Copyright (c) 2023 Lotus
+Copyright (c) 2023-2024 Lotus
