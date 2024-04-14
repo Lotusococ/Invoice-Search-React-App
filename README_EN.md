@@ -31,4 +31,4 @@ When uploading CSV files, please include a header in the first row and the data 
 
 ## LICENSE
 MIT  
-Copyright (c) 2023 Lotus
+Copyright (c) 2023-2024 Lotus
